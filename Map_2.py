@@ -16,12 +16,10 @@ for contador in range(0,400):
     for y in range(0,400):
         lista[y][contador] = img[contador,y]
 
-
 table = 400*[[0]]
 
 for contador in range(0,400):
     table[contador] = 400*[[0]]
-
 
 for contador in range(0,400):
     ##arq.write("\n")
@@ -58,8 +56,7 @@ if table[endcell[0]][endcell[1]] == ['0'] or table[startcell[0]][startcell[1]] =
 else:
 
     print ("Celula Valida!")
-    print (table[startcell[0]][startcell[1]])
-    
+    print (table[startcell[0]][startcell[1]])    
         
     distx = ((startcell[0] - endcell[0])**2)
     disty = ((startcell[1] - endcell[1])**2)
@@ -101,8 +98,7 @@ else:
         
                 distx = (((start_x+1) - endcell[0])**2)
                 disty = ((start_y - endcell[1])**2)
-                dist_table[0] = (distx + disty) ** 0.5
-            
+                dist_table[0] = (distx + disty) ** 0.5            
    
         if ifx_ < 0:
             dist_table[1] = 565.685424949
@@ -172,8 +168,7 @@ else:
         if ifx_ < 0 or ify > 399:
             dist_table[6] = 565.685424949
          
-        else:
-        
+        else:        
         
             if table[start_x - 1][start_y + 1] == ['0']:             
                 dist_table[6] = 565.685424949
@@ -431,7 +426,7 @@ else:
                     ##contadores de preto pra ver o melhor caminho
 
                     ##Se atentar ao fato de que a linha e desenhada porem as coordenadas nao sao armazenadas
-                    xc = 0
+                   xc = 0
                     xb = 0
                     xa = 10
                     while table[start_x - xc][start_y - 1] == ['0'] and start_x - 7 - xc > 0 and xc < 400:
@@ -477,8 +472,7 @@ else:
                         start_y = start_y - 8
                         start_x = start_x + xb + 1
 
-                print direct                                
-                
+                print direct                                            
 
         count = count + 1        
 cv2.imshow('image', img)
