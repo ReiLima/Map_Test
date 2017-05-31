@@ -1,2 +1,2 @@
 # Map_Test
-Test for an mapping program in Python
+Test for a mapping program in Python
