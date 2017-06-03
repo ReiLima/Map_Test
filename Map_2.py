@@ -426,7 +426,7 @@ else:
                     ##contadores de preto pra ver o melhor caminho
 
                     ##Se atentar ao fato de que a linha e desenhada porem as coordenadas nao sao armazenadas
-                   xc = 0
+                    xc = 0
                     xb = 0
                     xa = 10
                     while table[start_x - xc][start_y - 1] == ['0'] and start_x - 7 - xc > 0 and xc < 400:
