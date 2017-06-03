@@ -2,10 +2,11 @@
 import cv2
 import numpy as np
 
-##arq = open("table.txt", "w")
+arq = open("Dist.txt", "w")
 
 lista = 400*[[0]]
 table = 400*[[0]]
+path = 1600*[[0,0]]
 
 for contador in range(0,400):
     lista[contador] = 400*[[0,0,0]]
@@ -223,6 +224,9 @@ else:
         last_x[count] = start_x
         last_y[count] = start_y        
         print (start_x,start_y)
+        path[count] = [start_x, start_y]
+        arq.write(str(path[count]))
+        arq.write("\n")
         
               
         if count > 2:
@@ -476,4 +480,4 @@ cv2.imshow('image', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
         
-##arq.close() 
+arq.close() 
