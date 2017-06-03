@@ -5,9 +5,11 @@ import numpy as np
 ##arq = open("table.txt", "w")
 
 lista = 400*[[0]]
+table = 400*[[0]]
 
 for contador in range(0,400):
     lista[contador] = 400*[[0,0,0]]
+    table[contador] = 400*[[0]]
 
 img = cv2.imread('Maptest.png')
 
@@ -15,11 +17,6 @@ for contador in range(0,400):
     
     for y in range(0,400):
         lista[y][contador] = img[contador,y]
-
-table = 400*[[0]]
-
-for contador in range(0,400):
-    table[contador] = 400*[[0]]
 
 for contador in range(0,400):
     ##arq.write("\n")
